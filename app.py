@@ -74,5 +74,11 @@ con = st.container()
 
 with con:
     # plotly chart
-    bar1 = px.bar(filtered_data, x="Product line", y="Revenue")
+    bar1 = px.bar(filtered_data, x="Product line", y="Revenue",title="Revenue by Product Line",color='Gender',hover_data=['Revenue'])
     st.plotly_chart(bar1)
+    bar2 = px.bar(filtered_data, x="City", y="Revenue", title="Revenue by City")
+    st.plotly_chart(bar2)
+    bar3 = px.bar(filtered_data,x="Customer type",y="Revenue", title="Revenue by Customer Type")
+    st.plotly_chart(bar3)
+
+
